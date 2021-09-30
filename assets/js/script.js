@@ -4,6 +4,7 @@ var fiveDayForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${city
 var currentWeather = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=`;
 
 
+
 function currentWeatherApi(requestUrl) {
     fetch(requestUrl)
         .then(function(response) {
