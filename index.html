@@ -20,67 +20,43 @@
     </header>
 
     <div class="row">
-        <div class="card col-3 search searchBody">
+        <div class="card col-3 search">
             <div class="card-body">
-                <h3>Search for a City:</h3>
+                <h2>Search for a City:</h2>
                 <input class="display-block inputArea searchBody">
-                <button class="btn btn-primary searchBody" type="submit">Search</button>
+                <button class="btn btn-primary searchButton" type="submit">Search</button>
             </div>
             <div class="searchHistory"></div>
         </div>
 
         <div class="col-9">
-            <div class="card-body">
-                <h3 class="card-title" id="city"></h3>
+            <div class="card-body currentWeather">
+                <h2 class="card-title" id="city"></h2>
                 <p class="temp"></p>
                 <p class="wind"></p>
                 <p class="humidity"></p>
-                <p class="uv">
-                    <div class="unIndex"></div>
-                </p>
+                <div class="uv">
+                    <p class="uvHeader inline"></p>
+                    <p class="uvIndex inline"></p>
+                </div>
+
             </div>
             <h3>5 Day Forecast:</h3>
             <div class="card-deck">
                 <div class="card col">
-                    <img src="http://openweathermap.org/img/wn/10d@2x.png" class="card-img-top" alt="...">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-
-                <div class="card col">
-                    <img src="#" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.</p>
-                    </div>
+                    <ul id="5"></ul>
                 </div>
                 <div class="card col">
-                    <img src="#" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show that equal
-                            height action.</p>
-                    </div>
+                    <ul id="13"></ul>
                 </div>
                 <div class="card col">
-                    <img src="#" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.</p>
-                    </div>
+                    <ul id="21"></ul>
                 </div>
                 <div class="card col">
-                    <img src="#" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" id="dateFive">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show that equal
-                            height action.</p>
-                    </div>
+                    <ul id="29"></ul>
+                </div>
+                <div class="card col">
+                    <ul id="37"></ul>
                 </div>
             </div>
         </div>
