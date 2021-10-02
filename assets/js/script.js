@@ -1,42 +1,36 @@
 var cityName = "Austin";
 
-var fiveDayForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=`;
-var currentWeather = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=`;
+var fiveDayForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=537c5082f054c67490bdd35711142b24`;
+//var oneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=mintutely,hourly,daily,alerts&appid=537c5082f054c67490bdd35711142b24`;
 
 
 
-function currentWeatherApi(requestUrl) {
-    fetch(requestUrl)
-        .then(function(response) {
-            if(response.status !== 200) {
-                console.log("error code " + response.status);
-            } else {
-                return response.json();
-            }
-        })
-        .then(function(data) {
-            // console.log(data);
-            console.log("temp: " + data.main.temp);
-            console.log("wind: " + data.wind.speed);
-            console.log("humidity: " + data.main.humidity);
-        })
-}
+$.ajax({
+    url: fiveDayForecast,
+    method: 'GET',
+}).then(function (response) {
+    // console.log(response);
+    // console.log(response.city.coord.lat);
+    // console.log(response.city.coord.lon);
+    let cityDate = $("<div>");
+    cityDate.text(cityName);
+    
 
-function forecastWeatherApi(requestUrl) {
-    fetch(requestUrl)
-        .then(function(response) {
-            if(response.status !== 200) {
-                console.log("error code " + response.status);
-            } else {
-                return response.json();
-            }
-        })
-        .then(function(data) {
-            console.log("temp: " + data.list[0].main.temp);
-            console.log("humidity" + data.list[0].main.humidity);
-            console.log("wind: " + data.list[0].wind.speed);
-        })
-}
-// callApi(fiveDayForecast);
-currentWeatherApi(currentWeather);
-forecastWeatherApi(fiveDayForecast);
+    let latitude = response.city.coord.lat;
+    let longitude = response.city.coord.lon;
+    console.log(latitude);
+    console.log(longitude);
+    var oneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=mintutely,hourly,daily,alerts&appid=537c5082f054c67490bdd35711142b24`;
+
+    $.ajax({
+        url: oneCall,
+        method: 'GET'
+    }).then(function (res) {
+        console.log(res);
+    }).catch(function (error) {
+        console.log(error.responseJSON.cod, error.responseJSON.message);
+    })
+}).catch(function (error) {
+    console.log(error.responseJSON.cod, error.responseJSON.message);
+})
+// 
