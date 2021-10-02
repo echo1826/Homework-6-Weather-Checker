@@ -1,0 +1,19 @@
+.search {
+    min-height: 100vh;
+}
+
+#city {
+    min-height: 30vh;
+    border: solid;
+}
+
+.inputArea {
+    width: 100%;
+}
+.searchBody {
+    padding: 5px;
+}
+
+img {
+    max-width: 75px;
+}
