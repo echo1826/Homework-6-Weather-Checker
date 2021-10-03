@@ -1,12 +1,50 @@
+header {
+    background: linear-gradient(to right, #2626be 0%, #421685 100%);
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+input {
+    border-radius: 5px;
+}
+
+img {
+    max-width: 75px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-size: 25px;
+    padding: 5px 5px 10px 5px;
+
+}
+
+p {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
 .search {
     min-height: 98vh;
     justify-content: center;
     align-items: center;
 }
 
-input {
-    border-radius: 5px;
-}
 
 .cardColor {
     background-color: rgb(56, 65, 80);
@@ -26,34 +64,11 @@ input {
     padding: 5px;
 }
 
-img {
-    max-width: 75px;
-}
-
 .inline {
     display: inline-block;
 }
 
-ul {
-    list-style-type: none;
-}
-
-li {
-    font-size: 25px;
-    padding: 5px 5px 10px 5px;
-
-}
-
-p {
-    font-size: 25px;
-}
-
 .bolder {
-    font-weight: bolder;
-}
-
-h2 {
-    font-size: 40px;
     font-weight: bolder;
 }
 
