@@ -1,5 +1,10 @@
 .search {
-    min-height: 100vh;
+    min-height: 98vh;
+}
+
+.cardColor {
+    background-color: rgb(56, 65, 80);
+    color: white;
 }
 
 .currentWeather {
@@ -28,17 +33,55 @@ ul {
 
 li {
     font-size: 25px;
+    padding: 5px 5px 10px 5px;
+
 }
 
 p {
     font-size: 25px;
 }
 
-h3 {
+.bolder {
     font-weight: bolder;
 }
 
 h2 {
     font-size: 40px;
     font-weight: bolder;
+}
+
+.safe {
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background-color: green;
+    display: inline;
+}
+
+.orange {
+    background-color: orangered;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    display: inline;
+}
+
+.warning {
+    background-color: yellow;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    display: inline;
+}
+
+.danger {
+    background-color: red;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    display: inline;
 }
