@@ -41,7 +41,6 @@ function getApi(cityName) {
         url: currentWeather,
         method: 'GET',
     }).then(function (response) {
-        // console.log("current weather")
         let temp = response.main.temp;
         let wind = response.wind.speed;
         let humidity = response.main.humidity;
@@ -53,7 +52,6 @@ function getApi(cityName) {
         let dailyIconUrl = `http://openweathermap.org/img/wn/${dailyIconCode}@2x.png`;
         let img = $("<img>")
         img.attr("src", dailyIconUrl);
-        
         let latitude = response.coord.lat;
         let longitude = response.coord.lon;
         var oneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=mintutely,hourly,daily,alerts&appid=537c5082f054c67490bdd35711142b24`;
@@ -91,7 +89,6 @@ function historyHandler(event) {
     clearCard();
     getApi(searchInput);
 }
-
     
 function searchHandler(event) {
     event.preventDefault();
@@ -103,7 +100,6 @@ function searchHandler(event) {
     clearCard();
     getApi(searchInput);
     getHistory();
-    $(".historyBtn").on("click", historyHandler);
 }
 
 function clearCard() {
@@ -120,24 +116,19 @@ function storeHistory(input) {
 function getHistory() {
     $(".historyBtn").remove();
     inputHistory = JSON.parse(localStorage.getItem("input"));
-    for (let i = 0; i < inputHistory.length; i++) {
-        let historyBtn = $("<button>");
-        historyBtn.attr("class", "historyBtn");
-        historyBtn.addClass("btn button btn-primary");
-        historyBtn.text(inputHistory[i]);
-        $(".searchHistory").append(historyBtn);
+    if(inputHistory !== null) {
+        for (let i = 0; i < inputHistory.length; i++) {
+            let historyBtn = $("<button>");
+            historyBtn.attr("class", "historyBtn");
+            historyBtn.addClass("btn button btn-primary");
+            historyBtn.text(inputHistory[i]);
+            $(".searchHistory").append(historyBtn);
+        }
+        $(".historyBtn").on("click", historyHandler);
+    } else {
+        return;
     }
 }
 
+getHistory();
 $(".button").on("click", searchHandler);
-
-
-// console.log($(".searchButton"));
-
-// local storage function:
-// store values into array then put array into local storage
-// sets the search history into local storage at different key values 
-
-// local storage get function:
-// gets array stored in local storage
-// iterate over array and generate buttons with values slapped on them
