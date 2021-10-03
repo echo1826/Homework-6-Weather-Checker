@@ -64,13 +64,12 @@ tempEl.text("Temp: " + response.list[i].main.temp + String.fromCharCode(176) + "
 Some problems I ran into in developing this application was making sure I was able to do all of my functionality while the variables were in scope. A very tedious thing, as I learned that most people do this for API calls, was just trying to get the correct data out off the API. I also had issues in figuring out how the page layout would be including the elements that would be generated dynamically in javascript. 
 
 ## Future Development
-I've acknowledged that I've hard coded the search to be based on the time of search, thus resulting in the future five day forecast to not always give you data on the midday forecast for the future days rather it will give you the forecast at whatever is at a certain position in the array given by the API. I will tackle the math in converting the loop to always pick the midday forecast no matter the time of search. Another bug is that the search history generated will only take what the user inputs, so if the user puts in the city name all lowercase, then the history will generate a button with the same text making it look unprofessional.
+I've acknowledged that I've hard coded the search to be based on the time of search, thus resulting in the future five day forecast to not always give you data on the midday forecast for the future days rather it will give you the forecast at whatever is at a certain position in the array given by the API. I will tackle the math in converting the loop to always pick the midday forecast no matter the time of search. Another bug is that the search history generated will only take what the user inputs, so if the user puts in the city name all lowercase, then the history will generate a button with the same text making it look unprofessional.<br><br>
 
 ## Built Using
 Bootstrap 4.6: [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)<br><br>
 Moment.js: [moment.js](https://momentjs.com/docs/)<br><br>
 jQuery 3.6: [jQuery](https://code.jquery.com/)<br><br>
-<br><br>
 
 ## APIs used
 One Call API: [One Call](https://openweathermap.org/api/one-call-api)<br><br>
