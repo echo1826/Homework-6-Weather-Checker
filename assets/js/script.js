@@ -25,7 +25,7 @@ function getApi(cityName) {
             let iconEl = $("<img>");
             iconEl.attr("class", "futureIcon");
             let iconCode = response.list[i].weather[0].icon;
-            let iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`
+            let iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
             iconEl.attr("src", iconUrl);
             $("#" + j).append(dateEl);
             $("#" + j).append(iconEl);
@@ -50,7 +50,7 @@ function getApi(cityName) {
         $(".humidity").text("Humditiy: " + humidity + "%");
         let dailyIconCode = response.weather[0].icon;
         let dailyIconUrl = `http://openweathermap.org/img/wn/${dailyIconCode}@2x.png`;
-        let img = $("<img>")
+        let img = $("<img>");
         img.attr("src", dailyIconUrl);
         let latitude = response.coord.lat;
         let longitude = response.coord.lon;
@@ -109,6 +109,7 @@ function clearCard() {
 
 function storeHistory(input) {
     console.log("storing now!")
+    console.log(inputHistory);
     inputHistory.push(input);
     localStorage.setItem("input", JSON.stringify(inputHistory));
 }
@@ -116,6 +117,7 @@ function storeHistory(input) {
 function getHistory() {
     $(".historyBtn").remove();
     inputHistory = JSON.parse(localStorage.getItem("input"));
+    console.log(inputHistory);
     if(inputHistory !== null) {
         for (let i = 0; i < inputHistory.length; i++) {
             let historyBtn = $("<button>");
@@ -126,7 +128,7 @@ function getHistory() {
         }
         $(".historyBtn").on("click", historyHandler);
     } else {
-        return;
+        return inputHistory = [];
     }
 }
 
