@@ -1,5 +1,11 @@
 .search {
     min-height: 98vh;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border-radius: 5px;
 }
 
 .cardColor {
@@ -9,12 +15,13 @@
 
 .currentWeather {
     min-height: 30vh;
-    border: solid;
+    border: 2px solid;
 }
 
 .inputArea {
     width: 100%;
 }
+
 .searchBody {
     padding: 5px;
 }
@@ -84,4 +91,26 @@ h2 {
     padding-right: 10px;
     color: white;
     display: inline;
+}
+
+.button {
+    border-radius: 5px;
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.searchButton {
+    margin-bottom: 10px;
+}
+
+.historyBtn {
+    background-color: grey;
+    margin-top: 20px;
+    border-color: grey;
+}
+
+.searchHistory {
+    border-top: 2px solid;
+    border-color: grey;
 }
