@@ -19,7 +19,7 @@ After each search, a new button will appear with your latest city search that wi
 
 ## Deployment
 Deployed on: 10/3/2021
-Weather Dashboard: [Application](https://echo1826.github.io/Homework-6-Weather-Checker/)<br><br>
+Weather Dashboard: [Application](https://echo1826.github.io/Weather-Checker/)<br><br>
 
 ## Credits/Contributors
 I want to thank Sue Lee for suggesting a solution in regards to trying to format the current date into the correct order as well as iterating over the data of the five day forecast <br><br>
